@@ -13,8 +13,13 @@
         android:theme="@style/Theme.EjerciciosDiplomado"
         tools:targetApi="31">
         <activity
+            android:name=".ejercicio_two.TwoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_two" />
+        <activity
             android:name=".ejercicio_uno.CicloVida"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ejercicio_uno.SecondActivity"
             android:exported="false" />

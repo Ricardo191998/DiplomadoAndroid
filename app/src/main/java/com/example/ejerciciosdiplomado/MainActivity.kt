@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.ejerciciosdiplomado.ejercicio_two.TwoActivity
 import com.example.ejerciciosdiplomado.ejercicio_uno.CicloVida
 import com.example.ejerciciosdiplomado.ejercicio_uno.FirstActivity
 import com.example.ejerciciosdiplomado.ejercicio_uno.IntentImplicitoActivity
@@ -16,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        //val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar)
+        // setSupportActionBar(toolbar)
 
         setupView()
     }
@@ -55,6 +56,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_item3 -> {
                     // Acción para el elemento 2
+                    val intent = Intent(this, TwoActivity::class.java)
+                    startActivity(intent)
                 }
             }
             drawerLayout.closeDrawers()

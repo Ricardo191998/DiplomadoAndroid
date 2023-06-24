@@ -2,4 +2,9 @@
     <string name="app_name">EjerciciosDiplomado</string>
     <string name="navigation_drawer_open">Abrir</string>
     <string name="navigation_drawer_close">Cerrar</string>
+    <string name="title_activity_two">TwoActivity</string>
+    <string name="title_home">Frame Layout</string>
+    <string name="title_dashboard">Linear Layout</string>
+    <string name="title_notifications">Relative Layout</string>
+    <string name="title_contraint">Contraint Layout</string>
 </resources>

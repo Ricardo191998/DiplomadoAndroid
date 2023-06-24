@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import com.example.ejerciciosdiplomado.R
 
@@ -11,6 +12,8 @@ class IntentImplicitoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_implicito)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val button = findViewById<Button>(R.id.btnIntent)
         val btnUrl = findViewById<Button>(R.id.btnUrl)
@@ -30,5 +33,14 @@ class IntentImplicitoActivity : AppCompatActivity() {
             val intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
