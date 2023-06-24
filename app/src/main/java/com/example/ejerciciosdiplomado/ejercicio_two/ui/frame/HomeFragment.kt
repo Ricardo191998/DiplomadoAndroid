@@ -1,4 +1,4 @@
-package com.example.ejerciciosdiplomado.ejercicio_two.ui.home
+package com.example.ejerciciosdiplomado.ejercicio_two.ui.frame
 
 import android.content.Context
 import android.os.Bundle
@@ -11,11 +11,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.ejerciciosdiplomado.databinding.FragmentHomeBinding
+import com.example.ejerciciosdiplomado.databinding.FragmentFrameBinding
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentFrameBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentFrameBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome

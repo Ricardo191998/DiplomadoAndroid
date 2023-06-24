@@ -1,4 +1,4 @@
-package com.example.ejerciciosdiplomado.ejercicio_two.ui.dashboard
+package com.example.ejerciciosdiplomado.ejercicio_two.ui.linear
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
