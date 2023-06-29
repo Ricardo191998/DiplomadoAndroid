@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:text="Pokemon Name"
         android:textSize="16sp"
-        android:layout_marginStart="16dp" />
+        android:layout_marginStart="16dp"
+        />
 
 </LinearLayout>
