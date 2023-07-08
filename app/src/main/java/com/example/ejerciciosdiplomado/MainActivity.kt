@@ -10,6 +10,7 @@ import com.example.ejerciciosdiplomado.ejercicio_two.TwoActivity
 import com.example.ejerciciosdiplomado.ejercicio_uno.CicloVida
 import com.example.ejerciciosdiplomado.ejercicio_uno.FirstActivity
 import com.example.ejerciciosdiplomado.ejercicio_uno.IntentImplicitoActivity
+import com.example.ejerciciosdiplomado.login.LoginActivity
 import com.example.ejerciciosdiplomado.registro.RegistroActivity
 import com.google.android.material.navigation.NavigationView
 
@@ -63,6 +64,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_item4 -> {
                     // Acción para el elemento 2
                     val intent = Intent(this, RegistroActivity::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.nav_item5 -> {
+                    // Acción para el elemento 2
+                    val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                 }
             }

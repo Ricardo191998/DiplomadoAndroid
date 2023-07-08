@@ -49,7 +49,6 @@ class RegistroActivity : AppCompatActivity() {
             val validationPassword = validateText(tvPassword, "Contraseña requerida", false)
 
             if( validationName && validationLastName && validationEmail && validationPassword){
-                Toast.makeText(this, "Formulario correcto", Toast.LENGTH_SHORT).show()
                 val bundle = Bundle().apply {
                     putString("KEY_NAME", tvName.text.toString().trim())
                     putString("KEY_LASTNAME", tvLastName.text.toString().trim())

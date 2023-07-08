@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -51,14 +52,18 @@ class ConstraintFragment : Fragment(){
             val context: Context = requireContext()
             layoutManager = LinearLayoutManager(context)
             //layoutManager = LinearLayoutManager(this@MainActivity)
+            //val pokeAdapter = PokemonAdapter(getPokemonList())
+            /*pokeAdapter.onItemSelected = { pokemon ->
+                Toast.makeText(context, pokemon.name, Toast.LENGTH_SHORT).show()
+            }*/
             adapter = PokemonAdapter(getPokemonList())
         }
     }
 
     private fun getPokemonList(): List<Pokemon> {
         val pokemonList = mutableListOf<Pokemon>()
-        pokemonList.add(Pokemon("Pikachu","https://www.google.com/url?sa=i&url=https%3A%2F%2Far.pinterest.com%2Fflor1531%2Fpikachu%2F&psig=AOvVaw15R8WhCbXgYaFLxEI4roFa&ust=1687657967581000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiOvY_m2v8CFQAAAAAdAAAAABAE"))
-        pokemonList.add(Pokemon("Charizard", "https://www.google.com/url?sa=i&url=https%3A%2F%2Festrategiaspokemon.fandom.com%2Fes%2Fwiki%2FCharizard&psig=AOvVaw2qGZBR91y62IqJNaEvjPre&ust=1687658027418000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJjss5vm2v8CFQAAAAAdAAAAABAE"))
+        pokemonList.add(Pokemon("Pikachu","https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/6420b-pikachu-sentado-png.png?resize=450%2C450&ssl=1"))
+        pokemonList.add(Pokemon("Charizard", "https://static.wikia.nocookie.net/espokemon/images/9/95/Charizard.png/revision/latest?cb=20180325003352"))
         // Agrega más Pokémon a la lista según sea necesario
         return pokemonList
     }
